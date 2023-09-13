@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://portfolio-five-tau-31.vercel.app/",
+  "homepage": "https://portfolio-shaffinx.vercel.app",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
