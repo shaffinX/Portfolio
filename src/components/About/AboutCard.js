@@ -10,8 +10,7 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Shaffin Imam </span>
             from <span className="purple"> Islamabad, Pakistan.</span>
-            <br /> I am a student pursuing Bachelor's in Computer
-            Science at FAST NUCES Islamabad.
+            <br /> I am fluent in Programming languages like C/C++, Javascript, Python, x86 assembly language, SQL and C#.
             <br />
             Additionally I do FreeLancing on FIVERR and Upwork.
             <br />
