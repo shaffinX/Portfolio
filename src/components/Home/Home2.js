@@ -19,7 +19,7 @@ function Home2() {
             <span className="purple">ABOUT </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am Shaffin Imam and I am Student at FAST NUCES Islamabad
+              I am Shaffin Imam
               <br />
               <br />I am fluent in Programming languages like
               <i>
