@@ -19,12 +19,19 @@ function Home2() {
             <span className="purple">ABOUT </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I am Shaffin Imam
+              I am Shaffin Imam and I am a Full Stack Developer
               <br />
               <br />I am fluent in Programming languages like
               <i>
                 <b className="purple"> C/C++, Javascript, Python, x86 assembly language, SQL and C#. </b>
               </i>
+              <br />
+              <br />
+              The Frameworks
+              <i>
+                <b className="purple"> Node JS, React JS, Next JS, Vue JS, React Native, Flutter, Laravel, PHP, Express </b>
+              </i>
+              are my strong suits.
               <br />
               <br />
               My field of Interest's are &nbsp;
@@ -36,11 +43,11 @@ function Home2() {
               <br />
               <br />
               I am a 
-              <b className="purple"> Computer Science Student</b> and my favourite fields are
+              <b className="purple"> Computer Scientist</b> and my favourite fields are
               <i>
                 <b className="purple">
                   {" "}
-                  DataBase Design and Software Design
+                  DataBase Design,Web Development and Software Design
                 </b>
               </i>
               &nbsp;
