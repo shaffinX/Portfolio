@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('portfolio');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,48 +25,42 @@ const Navbar = () => {
   const handleNavClick = (section) => {
     setActiveSection(section);
     setIsOpen(false);
-    
-    // Smooth scroll to section
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+
+    // Navigate to the corresponding route
+    navigate(`/${section}`);
   };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">ShaffinX</span>
+          <span className="logo-text" onClick={(e)=>{e.preventDefault();navigate('/')}}>ShaffinX</span>
         </div>
         
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a
-              href="#portfolio"
-              className={`nav-link ${activeSection === 'portfolio' ? 'active' : ''}`}
-              onClick={() => handleNavClick('portfolio')}
+            <span
+              className={`nav-link ${activeSection === 'Portfolio' ? 'active' : ''}`}
+              onClick={() => handleNavClick('Portfolio')}
             >
               Portfolio
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a
-              href="#about"
-              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-              onClick={() => handleNavClick('about')}
+            <span
+              className={`nav-link ${activeSection === 'About' ? 'active' : ''}`}
+              onClick={() => handleNavClick('About')}
             >
               About
-            </a>
+            </span>
           </li>
           <li className="nav-item">
-            <a
-              href="#contact"
-              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-              onClick={() => handleNavClick('contact')}
+            <span
+              className={`nav-link ${activeSection === 'Contact' ? 'active' : ''}`}
+              onClick={() => handleNavClick('Contact')}
             >
               Contact
-            </a>
+            </span>
           </li>
         </ul>
         

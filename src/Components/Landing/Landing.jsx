@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import './Landing.css';
 import { initializeAnimations, setupScrollAnimations } from './AnimationHandler';
-
+import { useNavigate } from 'react-router-dom';
+import prf from '../../Assets/prf.jpg'; // Assuming the profile image is in the Assets folder
 const Landing = () => {
   useEffect(() => {
     // Initialize page load animations
@@ -11,8 +12,10 @@ const Landing = () => {
     setupScrollAnimations();
   }, []);
 
+  const nav = useNavigate();
+
   return (
-    <div className="portfolio-container">
+    <div className="portfolio-container1">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
@@ -23,24 +26,24 @@ const Landing = () => {
           </div>
         </div>
         
-        <div className="hero-content">
+        <div className="hero-content1">
           <div className="hero-text">
-            <h1 className="hero-title" data-animate="title">
+            <h1 className="hero-title1" data-animate="title">
               Hi, I'm <span className="name-highlight">Shaffin</span>
             </h1>
-            <h2 className="hero-subtitle" data-animate="subtitle">
+            <h2 className="hero-subtitle1" data-animate="subtitle">
               Full Stack Developer
             </h2>
-            <p className="hero-tagline" data-animate="tagline">
+            <p className="hero-tagline1" data-animate="tagline">
               Crafting digital experiences with modern technologies. 
               Passionate about creating scalable solutions that make a difference.
             </p>
             <div className="hero-buttons" data-animate="buttons">
-              <button className="cta-button primary">
+              <button className="cta-button primary" onClick={()=>{nav('/Portfolio')}}>
                 <span>View My Work</span>
                 <div className="button-glow"></div>
               </button>
-              <button className="cta-button secondary">
+              <button className="cta-button secondary" onClick={()=>{nav('/Contact')}}>
                 <span>Contact Me</span>
                 <div className="button-glow"></div>
               </button>
@@ -56,12 +59,13 @@ const Landing = () => {
                       <stop offset="0%" stopColor="#ff6b6b" />
                       <stop offset="100%" stopColor="#ff8e8e" />
                     </radialGradient>
+                    <clipPath id="circleClip">
+                      <circle cx="150" cy="150" r="130" />
+                    </clipPath>
                   </defs>
                   <circle cx="150" cy="150" r="140" fill="url(#profileGradient)" opacity="0.1" />
                   <circle cx="150" cy="150" r="130" fill="#1a1a1a" />
-                  <text x="150" y="155" textAnchor="middle" fontSize="20" fill="#ff6b6b" fontFamily="Arial">
-                    Your Photo
-                  </text>
+                  <image href={prf} x="20" y="20" width="260" height="260" clipPath="url(#circleClip)" preserveAspectRatio="xMidYMid slice"/>
                 </svg>
               </div>
               <div className="image-rings">
@@ -105,6 +109,7 @@ const Landing = () => {
                   <div className="skill-icon">🔷</div>
                   <span>TypeScript</span>
                 </div>
+                
               </div>
             </div>
 
@@ -161,6 +166,9 @@ const Landing = () => {
                 </div>
               </div>
             </div>
+
+
+            
           </div>
         </div>
       </section>
