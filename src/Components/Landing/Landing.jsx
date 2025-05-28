@@ -2,7 +2,24 @@ import React, { useEffect } from 'react';
 import './Landing.css';
 import { initializeAnimations, setupScrollAnimations } from './AnimationHandler';
 import { useNavigate } from 'react-router-dom';
-import prf from '../../Assets/prf.jpg'; // Assuming the profile image is in the Assets folder
+import prf from '../../Assets/prf.jpg';
+import SkillsData from './data_sk';
+import * as FaIcons from "react-icons/fa6";
+import * as RiIcons from "react-icons/ri";
+import * as IoIcons from "react-icons/io5";
+import * as SiIcons from "react-icons/si";
+import * as TbIcons from "react-icons/tb";
+import * as DiIcons from "react-icons/di";
+
+const iconLibraries = {
+  Fa: FaIcons,
+  Ri: RiIcons,
+  Io: IoIcons,
+  Si: SiIcons,
+  Tb: TbIcons,
+  Di: DiIcons
+};
+
 const Landing = () => {
   useEffect(() => {
     // Initialize page load animations
@@ -85,90 +102,27 @@ const Landing = () => {
           </h2>
           
           <div className="skills-grid">
-            {/* Frontend */}
-            <div className="skill-category" data-animate="category-1">
-              <h3 className="category-title">Frontend</h3>
-              <div className="skills-list">
-                <div className="skill-item">
-                  <div className="skill-icon">⚛️</div>
-                  <span>React</span>
+            {SkillsData.map((data, index) => (
+              <div key={index}>
+                <div className="skill-category" data-animate={data.category}>
+                  <h3 className="category-title">{data.name}</h3>
+                  <div className="skills-list">
+                    {data.skills.map((skill, idx) => {
+                      const IconSet = iconLibraries[skill.type] || {};
+                      const IconComponent = IconSet?.[skill.icon];
+                      return(
+                        <div className="skill-item" key={idx}>
+                          {IconComponent?<IconComponent className="skill-icon"/>:<span>#</span>}
+                          <span>{skill.name}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
-                <div className="skill-item">
-                  <div className="skill-icon">📱</div>
-                  <span>React Native</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🎨</div>
-                  <span>CSS3</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">⚡</div>
-                  <span>JavaScript</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🔷</div>
-                  <span>TypeScript</span>
-                </div>
-                
+
               </div>
-            </div>
 
-            {/* Backend */}
-            <div className="skill-category" data-animate="category-2">
-              <h3 className="category-title">Backend</h3>
-              <div className="skills-list">
-                <div className="skill-item">
-                  <div className="skill-icon">🟢</div>
-                  <span>Node.js</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🐍</div>
-                  <span>Python</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🗄️</div>
-                  <span>MongoDB</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🐘</div>
-                  <span>PostgreSQL</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🔥</div>
-                  <span>Express.js</span>
-                </div>
-              </div>
-            </div>
-
-            {/* DevOps & Tools */}
-            <div className="skill-category" data-animate="category-3">
-              <h3 className="category-title">DevOps & Tools</h3>
-              <div className="skills-list">
-                <div className="skill-item">
-                  <div className="skill-icon">🐙</div>
-                  <span>Git</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🐳</div>
-                  <span>Docker</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">☁️</div>
-                  <span>AWS</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">🔧</div>
-                  <span>Webpack</span>
-                </div>
-                <div className="skill-item">
-                  <div className="skill-icon">📊</div>
-                  <span>Analytics</span>
-                </div>
-              </div>
-            </div>
-
-
-            
+            ))}
           </div>
         </div>
       </section>
