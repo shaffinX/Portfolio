@@ -5,6 +5,7 @@ import {
   initScrollAnimations, 
   initHoverAnimations 
 } from './AnimationHandler3';
+import { FaDownload } from "react-icons/fa6";
 
 const Resume = () => {
   const pageRef = useRef(null);
@@ -50,7 +51,7 @@ const Resume = () => {
               onClick={handleDownload}
               ref={downloadBtnRef}
             >
-              <span className="btn-icon">📥</span>
+              <span className="btn-icon"><FaDownload color='white'/></span>
               Download PDF
             </button>
           </div>
