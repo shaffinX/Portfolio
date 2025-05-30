@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume_CV/Resume';
 import AboutMe from './Components/About/AboutMe';
+import Contact from './ContactUs/Contact';
 function App() {
   return (
     <React.Fragment>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="/Resume" element={<Resume />} />
           <Route path="/About" element={<AboutMe />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
