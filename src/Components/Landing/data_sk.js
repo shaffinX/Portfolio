@@ -31,6 +31,20 @@ const SkillsData=[
     },
     {
         category:"category-3",
+        name:"Programming Skills",
+        skills:[
+            { icon: "TbBrandCpp", name: "C/C++",type:"Tb" },
+            { icon: "FaPython", name: "Python",type:"Fa"  },
+            { icon: "TbBrandCpp", name: "DSA",type:"Tb"  },
+            { icon: "IoGitNetworkOutline", name: "Neural Networks" ,type:"Io" },
+            { icon: "FaAppStoreIos", name: "IOS App" ,type:"Fa" },
+            { icon: "FaAndroid", name: "Android App" ,type:"Fa" },
+            { icon: "FaWindows", name: "Desktop App" ,type:"Fa" },
+            { icon: "FaChrome", name: "Web App" ,type:"Fa" }
+        ]
+    },
+    {
+        category:"category-4",
         name:"Database",
         skills:[
             { icon: "TbSql", name: "SQL",type:"Tb" },
@@ -42,27 +56,15 @@ const SkillsData=[
         ]
     },
     {
-        category:"category-4",
+        category:"category-5",
         name:"DevOps & Tools",
         skills:[
             { icon: "FaGitAlt", name: "Git",type:"Fa" },
             { icon: "SiDocker", name: "Docker",type:"Si" },
             { icon: "FaAws", name: "AWS",type:"Fa" },
-            { icon: "SiKubernetes", name: "Kubernetes",type:"Si"  }
-        ]
-    },
-    {
-        category:"category-5",
-        name:"Programming Skills",
-        skills:[
-            { icon: "TbBrandCpp", name: "C/C++",type:"Tb" },
-            { icon: "FaPython", name: "Python",type:"Fa"  },
-            { icon: "TbBrandCpp", name: "DSA",type:"Tb"  },
-            { icon: "IoGitNetworkOutline", name: "Neural Networks" ,type:"Io" },
-            { icon: "FaAppStoreIos", name: "Mobile App" ,type:"Fa" },
-            { icon: "FaAndroid", name: "Mobile App" ,type:"Fa" },
-            { icon: "FaWindows", name: "Desktop App" ,type:"Fa" },
-            { icon: "FaChrome", name: "Web App" ,type:"Fa" }
+            { icon: "SiKubernetes", name: "Kubernetes",type:"Si"  },
+            { icon: "SiNginx", name: "NginX",type:"Si"  },
+            { icon: "SiApache", name: "Apache",type:"Si"  }
         ]
     }
 ]

@@ -62,6 +62,14 @@ const Navbar = () => {
               Contact
             </span>
           </li>
+          <li className="nav-item">
+            <span
+              className={`nav-link ${activeSection === 'Resume' ? 'active' : ''}`}
+              onClick={() => handleNavClick('Resume')}
+            >
+              Resume
+            </span>
+          </li>
         </ul>
         
         <div className={`nav-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
