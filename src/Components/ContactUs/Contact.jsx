@@ -15,18 +15,13 @@ const Contact = () => {
   const socialRef = useRef(null);
   const headerRef = useRef(null);
   const [state, handleSubmit] = useForm("xqabzqyp");
-  const [msg, setMsg] = React.useState("Send Message");
   useEffect(() => {
     if (state.succeeded) {
-      setMsg("Message Sent!");
-      // Optional: Reset the message after a few seconds
-      const timer = setTimeout(() => {
-        setMsg("Send Message");
-      }, 3000);
-      return () => clearTimeout(timer);
+      alert("Message Sent, Successfully!")
+      window.location.reload()
     }
      // eslint-disable-next-line
-  }, [state.succeeded]);
+  }, [state]);
 
   useEffect(() => {
     // Initialize page load animations
@@ -126,7 +121,7 @@ const Contact = () => {
                   onMouseEnter={(e) => handleHoverAnimations(e.target, 'button-hover')}
                   onMouseLeave={(e) => handleHoverAnimations(e.target, 'button-leave')}
                 >
-                  <span className="btn-text">{msg}</span>
+                  <span className="btn-text">Send Message</span>
                   <span className="btn-icon">→</span>
                 </button>
               </form>
@@ -143,7 +138,7 @@ const Contact = () => {
                   <div className="method-icon">✉</div>
                   <div className="method-content">
                     <h3>Email</h3>
-                    <a href="mailto:your.email@example.com">imamshaffin@gmail.com</a>
+                    <a href="mailto:imamshaffin@gmail.com">imamshaffin@gmail.com</a>
                   </div>
                 </div>
               </div>
