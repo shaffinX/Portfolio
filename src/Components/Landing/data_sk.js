@@ -40,7 +40,8 @@ const SkillsData=[
             { icon: "FaAppStoreIos", name: "IOS App" ,type:"Fa" },
             { icon: "FaAndroid", name: "Android App" ,type:"Fa" },
             { icon: "FaWindows", name: "Desktop App" ,type:"Fa" },
-            { icon: "FaChrome", name: "Web App" ,type:"Fa" }
+            { icon: "FaChrome", name: "Web App" ,type:"Fa" },
+            { icon: "FaCode", name:"x86 (MASM)", type:"Fa" }
         ]
     },
     {

@@ -48,4 +48,47 @@ const projects = [
       image: "/imageArr/project05.jpg"
     }
   ];
-  export default projects;
+
+  const codelab = [
+    {
+      id: 1,
+      title: "ConnectMe",
+      description: "A university project: a social media-style Android app built with Kotlin, MySQL, and PHP APIs, featuring posts, stories, calls, messaging, and a follow system.",
+      techStack: ["Kotlin", "PHP", "MySQL", "Apache", "Android"],
+      sourceCode: "https://github.com/shaffinX/ConnectMe3",
+      image: "/imageArr/codelab1.jpg"
+    },
+    {
+      id: 2,
+      title: "Solo Store",
+      description: "A university project: a mini e-commerce platform built with Java, JavaFX, and PostgreSQL, allowing users to create stores and sell items.",
+      techStack: ["Java", "JavaFX", "PostgreSQL", "MVC", "Desktop App"],
+      sourceCode: "https://github.com/shaffinX/Solo-Store",
+      image: "/imageArr/codelab2.png"
+    },
+    {
+      id: 3,
+      title: "Research Facility Network Simulation",
+      description: "A university project: a research facility network simulation in Cisco Packet Tracer using NAT, DHCP, PAT, dynamic routing protocols (EIGRP, RIP, OSPF), with configured DNS and web servers.",
+      techStack: ["CISCO Packet Tracer", "Networking", "Simulation"],
+      sourceCode: "https://github.com/shaffinX/Network-Simulation-CISCO",
+      image: "/imageArr/codelab3.png"
+    },
+    {
+      id: 4,
+      title: "Traffic Light Circuit Design",
+      description: "A university project: a traffic signal circuit simulation in Proteus designed using a 555 timer IC and a 4017 counter IC to automate the sequencing of traffic lights with accurate timing intervals.",
+      techStack: ["Proteus", "Circuit Design", "Simulation"],
+      sourceCode: "https://github.com/shaffinX/Traffic-Light-Proteus-Project",
+      image: "/imageArr/codelab4.png"
+    },
+    {
+      id: 5,
+      title: "Brick Breaker x86",
+      description: "A university project: a classic Brick Breaker game developed in x86 Assembly (MASM), featuring paddle and ball mechanics with collision detection and score tracking.",
+      techStack: ["X86", "Assembly", "MASM"],
+      sourceCode: "https://github.com/shaffinX/Brick-Breaker-Game-x86",
+      image: "/imageArr/codelab2.png"
+    },
+  ];
+  export {projects,codelab};
