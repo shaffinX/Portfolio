@@ -58,9 +58,9 @@ const Resume = () => {
 
           <div className="resume-container-wrapper" ref={resumeContainerRef}>
             <div className="resume-embed animate-embed">
-              {/* <iframe
+              <iframe
                 type="application/pdf"
-                src={`https://docs.google.com/gview?url=localhost:3000/resume.pdf&embedded=true`}
+                src={`https://docs.google.com/gview?url=shaffinx.vercel.app/resume.pdf&embedded=true`}
                 title="Resume PDF"
                 className="pdf-viewer"
                 width="100%"
@@ -68,8 +68,8 @@ const Resume = () => {
                 allow="autoplay"
                 loading="lazy"
                 
-              /> */}
-              <object
+              />
+              {/* <object
                   data="/resume.pdf#toolbar=1&navpanes=1&scrollbar=1"
                   type="application/pdf"
                   width="100%"
@@ -82,7 +82,7 @@ const Resume = () => {
                     width="100%"
                     height="800px"
                   />
-             </object>
+             </object> */}
 
             </div>
           </div>

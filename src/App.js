@@ -6,7 +6,6 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume_CV/Resume';
 import AboutMe from './Components/About/AboutMe';
 import Contact from './Components/ContactUs/Contact';
-import Admin from './Components/Admin/Admin';
 function App() {
   return (
     <React.Fragment>
@@ -19,7 +18,6 @@ function App() {
           <Route path="/Resume" element={<Resume />} />
           <Route path="/About" element={<AboutMe />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>
