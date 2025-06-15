@@ -6,6 +6,7 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume_CV/Resume';
 import AboutMe from './Components/About/AboutMe';
 import Contact from './Components/ContactUs/Contact';
+import NotFoundPage from './Components/NotFound';
 function App() {
   return (
     <React.Fragment>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Resume" element={<Resume />} />
           <Route path="/About" element={<AboutMe />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path='*' element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>
     </React.Fragment>
