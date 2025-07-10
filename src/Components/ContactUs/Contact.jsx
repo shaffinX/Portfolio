@@ -147,7 +147,7 @@ const Contact = () => {
                 <h3 className="social-title">Follow Me</h3>
                 <div className="social-icons">
                   <a 
-                    href="https://www.linkedin.com/in/shaffin-imam-11210b370" 
+                    href="https://www.linkedin.com/in/shaffin-imam-4b100a372" 
                     className="social-link linkedin"
                     target="_blank"
                     rel="noopener noreferrer"
